@@ -42,12 +42,14 @@ call          A          调用函数A
 ret           无
 cmp           A, B       比较指令，指令执行完成后，Pc条件码寄存器会自动开始执行下一条指令
 jne           A          jump if not equal, 
+jmp           A          无条件跳转指令
+jle           A          看条件寄存器0标识符是true还是false, true就跳到A指令行，       
 ```
 
-## 寄存器rdp, rsp
+## 寄存器rdp, rsp，条件码寄存器
 
 ```
 rbp(register base pointer): 栈基址寄存器（栈帧指针），指向当前栈帧的栈底地址
 rsp(register stack pointer): 栈顶寄存器(栈指针)，指向栈顶元素
-
+条件码寄存器： 比较结果存到这里
 ```
