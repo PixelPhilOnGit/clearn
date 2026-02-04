@@ -71,3 +71,28 @@ rsp(register stack pointer): 栈顶寄存器(栈指针)，指向栈顶元素
 应用程序可以很方便的访问操作系统提供的接口
 
 ```
+
+## 操作系统的内部组件
+
+`程序员或者应用程序一般直接操作内核`
+- linux shell 或 windows界面 【外壳】
+- kernel(内核)： CPU管理，内存管理，磁盘管理，中断管理（IO设备驱动等）
+
+## 操作系统启动流程
+说明：
+    每一种操作系统的启动细节都不一样
+    但是，不同的操作系统的大体启动流程都是差不多的
+一般操作系统的大体启动流程（真实的非常复杂）
+
+### 前置知识
+ 1. 操作系统程序实现存放在磁盘中
+ 2. BootLoader: 将磁盘中的OS加载到内存
+ 3. BIOS(Basic IO System): 提供开机支持工作，固定在主板的ROM(Read Only Memory)区域
+
+
+ ### 流程
+  1. CPU 执行BIOS指令
+  2. BIOS将BootLoader加载到内存中
+  3. CPU执行BootLoader中的指令
+  4. BootLoader将Os加载到内存中
+  5. CPU执行OS的指令
